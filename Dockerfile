@@ -1,4 +1,7 @@
-FROM daocloud.io/php:5.6-cli
-COPY . /usr/src/KODExplorer
-WORKDIR /usr/src/KODExplorer
-CMD [ "php", "./index.php" ]
+FROM tutum/apache-php
+RUN rm -rf /var/lib/apt/lists/*
+RUN rm -fr /app
+ADD . /app
+RUN mkdir /data
+RUN chmod -R 777 /data
+RUN chmod -R 777 /app
