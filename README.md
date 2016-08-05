@@ -1,8 +1,15 @@
 ﻿KodExplorer(http://kalcaddle.com/) for Docker
 ========
-#### Build images
+#### Build and run image
 ```
 sudo docker build -t ethanzhu/kode ./ #进入项目目录执行
+
+sudo docker run ethanzhu/kode 
+
+sudo docker ps
+
+sudo docker inspect {container_id}
+# 访问http://{container_ip}
 ```
 -------
 
